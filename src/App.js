@@ -161,7 +161,7 @@ const App = () => {
             data={timeChartData}
             options={{
               responsive: true,
-              plugins: { legend: { display: true } },
+              plugins: { legend: { display: true }, tooltip: { mode: 'index', intersect: false } },
               scales: {
                 x: {
                   display: true,
@@ -186,7 +186,7 @@ const App = () => {
             data={fftChartData}
             options={{
               responsive: true,
-              plugins: { legend: { display: true } },
+              plugins: { legend: { display: true }, tooltip: { mode: 'index', intersect: false } },
               scales: {
                 x: {
                   display: true,
@@ -285,7 +285,7 @@ const App = () => {
           )}
         </Grid>
 
-        {/* Additional Polish: Spacer or additional controls if needed */}
+        {/* Instructional Text */}
         <Grid item xs={12} md={6}>
           <Box
             display="flex"
@@ -294,10 +294,10 @@ const App = () => {
             justifyContent="center"
             height="100%"
           >
-            <Typography variant="body1" color="textSecondary">
+            <Typography variant="body1" color="textSecondary" align="center">
               Adjust the frequency and jitter parameters using the sliders on the left.
-              Observe how different jitter distributions affect the time domain signal
-              and its frequency spectrum.
+              Select the jitter distribution type to see how it affects the time domain
+              signal and its frequency spectrum.
             </Typography>
           </Box>
         </Grid>
